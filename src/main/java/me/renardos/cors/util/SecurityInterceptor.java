@@ -22,11 +22,16 @@ import org.jboss.resteasy.core.ResourceMethod;
 import org.jboss.resteasy.core.ServerResponse;
 import org.jboss.resteasy.spi.Failure;
 import org.jboss.resteasy.spi.HttpRequest;
-import org.jboss.resteasy.spi.InternalServerErrorException;
 import org.jboss.resteasy.spi.UnauthorizedException;
 import org.jboss.resteasy.spi.interception.PreProcessInterceptor;
 import org.jboss.resteasy.util.Base64;
 
+/**
+ * Manage authentication.
+ * 
+ * @author gildas
+ *
+ */
 @Provider
 @ServerInterceptor
 public class SecurityInterceptor implements PreProcessInterceptor {
@@ -75,7 +80,7 @@ public class SecurityInterceptor implements PreProcessInterceptor {
 		try {
 			usernameAndPassword = new String(Base64.decode(encodedUserPassword));
 		} catch (IOException e) {
-			throw new InternalServerErrorException(
+			throw new UnauthorizedException(
 					"Can't decode authentication content", e);
 		}
 
