@@ -83,14 +83,43 @@
 					</section>
 
 					<section>
-						<h2>CORS headers</h2>
+						<h2>CORS</h2>
+						<br/>
+						<h3>Specification</h3>
+							<a href="http://www.w3.org/TR/cors/">W3C - Cross-Origin Resource Sharing</a>
+						<br/>
+						<br/>
+						<h3>Demonstration used headers</h3>
 						<p>One for Origin, three for preflight using HTTP verb <code>OPTIONS</code>:</p>
 						<ol>
-							<li class="fragment"><code>Access-Control-Allow-Origin</code></li>
-							<li class="fragment"><code>Access-Control-Allow-Methods</code></li>
-							<li class="fragment"><code>Access-Control-Allow-Header</code></li>
-							<li class="fragment"><code>Access-Control-Max-Age</code></li>
+							<li><code>Access-Control-Allow-Origin</code></li>
+							<li><code>Access-Control-Allow-Methods</code></li>
+							<li><code>Access-Control-Allow-Header</code></li>
+							<li><code>Access-Control-Max-Age</code></li>
 						</ol>
+					</section>
+
+					<section>
+						<h2>Browser support</h2>
+							<a href="http://enable-cors.org/client.html">http://enable-cors.org/client.html</a>
+						<br/>
+						<br/>
+						<p>No support for:</p>
+						<ul>
+							<li>Internet Explorer 6</li>
+							<li>Opera Mini 5.0-7.0</li>
+							<li>Opera Mobile before 12</li>
+						</ul>
+						<br/>
+						<br/>
+						<p>Limitations for:</p>
+						<ul>
+							<li>Internet Explorer 8</li>
+							<li>Internet Explorer 9</li>
+						</ul>
+						<br/>
+						<br/>
+						<p>Good for others</p>
 					</section>
 
 					<section>

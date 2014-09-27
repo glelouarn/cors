@@ -59,6 +59,7 @@ public class CorsInterceptor implements MessageBodyWriterInterceptor {
 		context.getHeaders()
 				.add(ACCESS_CONTROL_ALLOW_HEADERS,
 						"X-Requested-With, Origin, Content-type, Accept, Content-Length, Authorization");
+		context.getHeaders().add("Access-Control-Allow-Credentials", "true");
 		context.getHeaders().add(ACCESS_CONTROL_MAX_AGE, "20");
 		context.proceed();
 	}
